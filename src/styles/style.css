@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Vazirmatn, sans-serif;
+}
+
+.mobile-menu-active {
+  right: 0 !important;
+}
+
+.hero-swiper::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.65) 100%
+  );
+  pointer-events: none;
+  z-index: 99;
+}
+
+.hero-swiper::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
+  pointer-events: none;
+  z-index: 99;
+}
+
+.movie-card-active,
+.free-movie-card-active {
+  transform: scale(1.1);
+  filter: brightness(1) !important;
+}
+
+.movie-card-active img,
+.free-movie-card-active img {
+  border: 1px solid white;
+}
+
+.movie-filter-option-active {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.filimo-child {
+  background: -webkit-linear-gradient(
+    245deg,
+    rgba(5, 197, 255, 0.2) 0,
+    #151515 40%
+  );
+}
+
+.faq-question-active {
+  color: #f59e0b;
+}
+
+.faq-question-active .faq-icon {
+  transform: rotate(-45deg);
+}
+
+.faq-question-active + .faq-answer {
+  height: auto;
+  padding-bottom: 16px;
+  opacity: 1;
+}
+
+footer {
+  background: linear-gradient(to right, transparent, #001c08, transparent);
+}
